@@ -35,7 +35,7 @@ variable "sample4"{
 }
 
 variable "sample5"{
-  type = "map"
+  type = map(String)
   default = {
     string  = "Hello",
     number  = 1000,
