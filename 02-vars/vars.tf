@@ -50,6 +50,8 @@ output "sample4"{
 }
 
 
-output "sample5"{
+output "sample5" {
   value = var.sample5["number"]
+
+
 }
