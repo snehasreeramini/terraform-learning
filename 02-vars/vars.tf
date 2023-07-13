@@ -58,3 +58,8 @@ variable  "URL" {}
 output "URL"{
   value = var.URL
 }
+
+variable  "URL_CLI" {}
+output "URL_CLI"{
+  value = var.URL_CLI
+}
