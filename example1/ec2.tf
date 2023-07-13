@@ -16,7 +16,7 @@ resource "aws_default_security_group" "default" {
    description      =     "allow TLS inbound traffic"
 
   ingress {
-    description =  "TLS FROM VPC"
+    description =  "TLS from VPC"
     protocol    = "tcp"
     from_port   = 22
     to_port     = 22
