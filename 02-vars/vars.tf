@@ -35,7 +35,7 @@ variable "sample4"{
 }
 
 variable "sample5"{
-  type = map(String)
+  type = map(string)
   default = {
     string  = "Hello",
     number  = 1000,
@@ -52,6 +52,4 @@ output "sample4"{
 
 output "sample5" {
   value = var.sample5["number"]
-
-
 }
