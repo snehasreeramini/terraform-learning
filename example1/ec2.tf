@@ -31,4 +31,7 @@ resource "aws_default_security_group" "default" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
+  tags = {
+    Name = "allow_tls"
+  }
 }
