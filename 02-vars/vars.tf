@@ -25,7 +25,7 @@ variable "sample3"{
 
 ##variable typrs
 variable "sample4"{
-  type = "list" #optional
+  type = list(string) #optional
   default = [
   "Hello",
     1000,
