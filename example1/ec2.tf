@@ -8,5 +8,5 @@ resource "aws_instance" "sample" {
 }
 
 output "public_ip"{
-  value = aws_instance.sample.ip
+  value = aws_instance.sample.public_ip
 }
