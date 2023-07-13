@@ -12,7 +12,7 @@ output "public_ip" {
   value = aws_instance.sample.public_ip
 }
 resource "aws_default_security_group" "default" {
-   name             =     "allow-tls"
+   name             =     "allow_tls"
    description      =     "allow TLS inbound traffic"
 
   ingress {
