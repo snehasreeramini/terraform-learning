@@ -25,7 +25,7 @@ variable "sample3"{
 
 ##variable typrs
 variable "sample4"{
-  type = list(string) #optional
+  type = list(any) #optional
   default = [
   "Hello",
     1000,
@@ -35,7 +35,7 @@ variable "sample4"{
 }
 
 variable "sample5"{
-  type = map(string)
+  type = map(any)
   default = {
     string  = "Hello",
     number  = 1000,
@@ -52,4 +52,9 @@ output "sample4"{
 
 output "sample5" {
   value = var.sample5["number"]
+}
+
+variable  "URL" {}
+output "URL"{
+  value = var.URL
 }
