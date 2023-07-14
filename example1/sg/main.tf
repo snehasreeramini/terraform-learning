@@ -1,16 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
-resource "aws_instance" "sample" {
-  ami                    = "ami-0bb6af715826253bf"
-  instance_type          = "t3.micro"
-  vpc_security_group_ids = [aws_security_group.allow_tls.id]
-}
-
-output "public_ip" {
-  value = aws_instance.sample.public_ip
-}
-
 resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
@@ -34,4 +21,8 @@ resource "aws_security_group" "allow_tls" {
   tags = {
     Name = "allow_tls"
   }
+}
+
+output "sg_id"{
+  value = aws_security_group.allow_tls.id
 }
