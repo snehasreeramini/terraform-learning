@@ -1,4 +1,4 @@
-provider "aws"{
+provider "aws" {
    region = "us-east-1"
 }
 
@@ -11,7 +11,8 @@ resource "aws_instance" "sample" {
 output "public_ip" {
   value = aws_instance.sample.public_ip
 }
-resource "aws_default_security_group" "default" {
+
+resource "aws_default_security_group" "allow_tls" {
    name             =     "allow_tls"
    description      =     "allow TLS inbound traffic"
 
@@ -30,7 +31,6 @@ resource "aws_default_security_group" "default" {
     cidr_blocks = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-
   tags = {
     Name = "allow_tls"
   }
