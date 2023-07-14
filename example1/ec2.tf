@@ -13,7 +13,7 @@ output "public_ip" {
 }
 
 resource "aws_default_security_group" "allow_tls" {
-   name             =     "allow_tls"
+   name             =     "allow tls"
    description      =     "allow TLS inbound traffic"
 
   ingress {
