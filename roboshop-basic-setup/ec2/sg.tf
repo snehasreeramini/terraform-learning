@@ -19,6 +19,6 @@ resource "aws_security_group" "allow_all" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "allow_${var.COMPONENT}"
   }
 }
