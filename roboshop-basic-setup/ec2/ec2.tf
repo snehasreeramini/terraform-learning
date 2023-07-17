@@ -15,7 +15,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
       password = "DevOps321"
     }
     inline = [
-      "ansible-pull -U https://github.com/snehasreeramini/ansible roboshop.yml -e HOST=localhost -e role_name=${var.COMPONENT} -e ENV=dev -e APP_VERSION=$(var.APP_VERSION)"
+      "ansible-pull -U https://github.com/snehasreeramini/ansible roboshop.yml -e HOST=localhost -e role_name=${var.COMPONENT} -e ENV=dev -e APP_VERSION=${var.APP_VERSION}"
     ]
   }
 }
