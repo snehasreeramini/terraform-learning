@@ -1,5 +1,5 @@
 resource "aws_instance" "sample" {
-  ami                    = "data.aws_ami.example.image_id"
+  ami                    = data.aws_ami.example.image_id
   instance_type          = "t3.micro"
   vpc_security_group_ids = [var.sg]
   provisioner "local-exec"{
@@ -8,6 +8,7 @@ resource "aws_instance" "sample" {
     cd /home/centos/ansible
     ansible-playbook -i ${self.public_ip}, roboshop.yml -e HOST=all -e role_name=frontend -e ENV=dev
   EOF
+
   }
 }
 
